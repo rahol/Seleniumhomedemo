@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.IOException;
+
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -72,7 +72,7 @@ public class MainTest {
 		if (driver.getTitle().equals("Google")) {
 			
 			File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(screenshotFile, new File("F:\\imagess.png"));
+			FileUtils.copyFile(screenshotFile, new File("F:\\imagesffs.png"));
 			
 			test.log(Status.PASS, "Navigated to the specified URL");
 		} else {
