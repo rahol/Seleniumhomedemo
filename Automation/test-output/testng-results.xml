@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13379" started-at="2019-03-06T11:13:08Z" finished-at="2019-03-06T11:13:21Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13379" started-at="2019-03-06T11:13:08Z" finished-at="2019-03-06T11:13:21Z">
+      <class name="BaseTest.MainTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:BaseTest.MainTest@675d3402]" name="beforeTest" is-config="true" duration-ms="8734" started-at="2019-03-06T11:13:08Z" finished-at="2019-03-06T11:13:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:BaseTest.MainTest@675d3402]" name="beforeMethod" is-config="true" duration-ms="170" started-at="2019-03-06T11:13:17Z" finished-at="2019-03-06T11:13:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="Initialization()[pri:0, instance:BaseTest.MainTest@675d3402]" name="Initialization" duration-ms="2083" started-at="2019-03-06T11:13:17Z" finished-at="2019-03-06T11:13:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialization -->
+        <test-method status="PASS" signature="aftertest()[pri:0, instance:BaseTest.MainTest@675d3402]" name="aftertest" is-config="true" duration-ms="2336" started-at="2019-03-06T11:13:19Z" finished-at="2019-03-06T11:13:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+      </class> <!-- BaseTest.MainTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

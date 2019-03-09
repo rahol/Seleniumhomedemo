@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationTestNG]">
+  <test thread-count="5" name="XMLFile(failed)">
+    <classes>
+      <class name="BaseTest.MainTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="Initialization"/>
+          <include name="aftertest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- BaseTest.MainTest -->
+    </classes>
+  </test> <!-- XMLFile(failed) -->
+</suite> <!-- Failed suite [AutomationTestNG] -->
