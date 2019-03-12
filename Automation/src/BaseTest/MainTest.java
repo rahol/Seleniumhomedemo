@@ -1,6 +1,5 @@
 package BaseTest;
 
-import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -10,8 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-
-
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
@@ -27,6 +24,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.AfterTest;
 
 
+@SuppressWarnings("unused")
 @Listeners(BaseTest.TestNGListener.class)
 public class MainTest {
 
@@ -56,32 +54,6 @@ public class MainTest {
 		htmlreporter.config().setTheme(Theme.DARK);
 	}
 
-	@Test
-	public void Initialization() throws Exception {
-		
-
-		test = report.createTest("Test Case 1 :Enter into Google webpage");
-		try {
-			driver.findElement(By.xpath("//*[@id='tsf']/div[2]/div/div[1]/div/div[1]/input"))
-					.sendKeys(excel.readDataFromExcel(1, 1, path, sheetname));
-			excel.writeDataFromExcel(1, 0, path, sheetname, sheetname);
-		} catch (Exception e) {
-			test.log(Status.ERROR, e.getMessage());
-		}
-
-		if (driver.getTitle().equals("Google")) {
-			
-			File screenshotFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			FileUtils.copyFile(screenshotFile, new File("F:\\imagesffs.png"));
-			
-			test.log(Status.PASS, "Navigated to the specified URL");
-		} else {
-			test.log(Status.FAIL, "Test Failed");
-		}
-
-		report.flush();
-
-	}
 
 	@BeforeTest
 	public void beforeTest() throws Exception {
