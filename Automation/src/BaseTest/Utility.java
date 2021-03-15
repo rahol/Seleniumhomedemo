@@ -1,15 +1,23 @@
 package BaseTest;
 
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
-
-public class ExcelMethods extends MainTest {
+@SuppressWarnings("unused")
+public class Utility extends MainTest {
 	FileInputStream input;
 	FileOutputStream webdata;
 	HSSFWorkbook wb;
@@ -46,29 +54,30 @@ public class ExcelMethods extends MainTest {
 		}
 	}
 
-	public void takeScreenShot(String filescreenshot)
+	public  static String takeScreenShot(String ScreenShotName) throws Exception
 	{
-		/*TakesScreenshot screenshot=(TakesScreenshot)driver;
-		
-		File scrFile=screenshot.getScreenshotAs(OutputType.FILE);
-		
-		File DestFile=new File(filescreenshot);
-		
-		Files.copy(scrFile, DestFile);*/
-		
-		try {
-		
-		}
-		catch(Exception e)
-		{
-			e.printStackTrace();
-		}
 		
 		
+			String dateName = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 		
-		
-		
+			TakesScreenshot screenshot=(TakesScreenshot)driver;
+			
+			File scrFile=screenshot.getScreenshotAs(OutputType.FILE);
+			
+			 String destination = System.getProperty("user.dir") + "/FailedTestScreenShots/"+ScreenShotName+dateName+".png";
+			
+			File DestFile=new File(destination);
+			
+			FileUtils.copyFile(scrFile, DestFile);
+			
 
+	
+		return destination;
+		
+		
+		
+		
+		
 		
 		
 	}

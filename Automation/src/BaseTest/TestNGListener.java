@@ -15,7 +15,7 @@ public class TestNGListener implements ITestListener {
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		MainTest.test.log(Status.PASS, "Test Case Passed");
+	MainTest.test.log(Status.PASS, "Test Case Passed");
 
 	}
 

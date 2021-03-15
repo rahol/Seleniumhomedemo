@@ -2,28 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30497" started-at="2019-03-12T16:37:07Z" finished-at="2019-03-12T16:37:37Z">
+  <suite name="AutomationTest" duration-ms="36763" started-at="2019-04-03T16:32:23Z" finished-at="2019-04-03T16:32:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30497" started-at="2019-03-12T16:37:07Z" finished-at="2019-03-12T16:37:37Z">
+    <test name="chromeTest" duration-ms="36763" started-at="2019-04-03T16:32:23Z" finished-at="2019-04-03T16:32:59Z">
       <class name="BaseTest.TestClass01">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:BaseTest.TestClass01@7d9d1a19]" name="beforeTest" is-config="true" duration-ms="23616" started-at="2019-03-12T16:37:07Z" finished-at="2019-03-12T16:37:30Z">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:BaseTest.TestClass01@4dfa3a9d]" name="beforeTest" is-config="true" duration-ms="31974" started-at="2019-04-03T16:32:23Z" finished-at="2019-04-03T16:32:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:BaseTest.TestClass01@7d9d1a19]" name="beforeMethod" is-config="true" duration-ms="469" started-at="2019-03-12T16:37:30Z" finished-at="2019-03-12T16:37:31Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:BaseTest.TestClass01@4dfa3a9d]" name="setUp" is-config="true" duration-ms="0" started-at="2019-04-03T16:32:55Z" finished-at="2019-04-03T16:32:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:BaseTest.TestClass01@4dfa3a9d]" name="beforeMethod" is-config="true" duration-ms="1815" started-at="2019-04-03T16:32:55Z" finished-at="2019-04-03T16:32:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Initialization()[pri:0, instance:BaseTest.TestClass01@7d9d1a19]" name="Initialization" duration-ms="3941" started-at="2019-03-12T16:37:31Z" finished-at="2019-03-12T16:37:35Z">
+        <test-method status="PASS" signature="Initialization(java.lang.String)[pri:1, instance:BaseTest.TestClass01@4dfa3a9d]" name="Initialization" duration-ms="166" started-at="2019-04-03T16:32:56Z" finished-at="2019-04-03T16:32:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[UK]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initialization -->
-        <test-method status="PASS" signature="aftertest()[pri:0, instance:BaseTest.TestClass01@7d9d1a19]" name="aftertest" is-config="true" duration-ms="2396" started-at="2019-03-12T16:37:35Z" finished-at="2019-03-12T16:37:37Z">
+        <test-method status="PASS" signature="aftertest()[pri:0, instance:BaseTest.TestClass01@4dfa3a9d]" name="aftertest" is-config="true" duration-ms="2698" started-at="2019-04-03T16:32:57Z" finished-at="2019-04-03T16:32:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- aftertest -->
       </class> <!-- BaseTest.TestClass01 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- chromeTest -->
+  </suite> <!-- AutomationTest -->
 </testng-results>
