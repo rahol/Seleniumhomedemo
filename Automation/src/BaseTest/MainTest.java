@@ -25,6 +25,7 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -32,6 +33,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
@@ -39,7 +42,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 
 @SuppressWarnings("unused")
-//@Listeners(BaseTest.TestNGListener.class)
+@Listeners(BaseTest.TestNGListener.class)
 public class MainTest {
 
 	protected static WebDriver driver;
@@ -59,6 +62,9 @@ public class MainTest {
 	static ExtentHtmlReporter htmlreporter;
 	String filepath = System.getProperty("user.dir") + "\\Reports\\extendreports.html";
 	static Markup m ;
+	 Actions act;
+	WebDriverWait w;
+	JavascriptExecutor js;
 
 	
 
@@ -86,7 +92,7 @@ public class MainTest {
 		
 		if(Browser.equalsIgnoreCase("chrome"))
 		{
-			WebDriverManager.chromedriver().version("2.46").setup();			
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		}
 		else if(Browser.equalsIgnoreCase("firefox"))
@@ -104,8 +110,9 @@ public class MainTest {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-		driver.get("https://www.google.com");
-		driver.manage().window().maximize();
+		 act= new Actions(driver);
+		 w  = new WebDriverWait(driver, 50);
+		 js = (JavascriptExecutor) driver;
 
 	}
 

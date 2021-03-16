@@ -26,6 +26,20 @@ public class Test {
 	driver.manage().window().maximize();
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	Actions act= new Actions(driver);
+
+	w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='top-links-trigger']/span")));
+	
+	driver.findElement(By.xpath("//*[@id='top-links-trigger']/span")).click();
+	
+	driver.findElement(By.xpath("//*[@id=\"ui-id-1\"]/ul/li[5]/a")).click();
+	
+	driver.findElement(By.id("email")).sendKeys("rahulraghuwanshi20@gmail.com");
+	
+	driver.findElement(By.id("pass")).sendKeys("Welcome@2020");
+	
+	//driver.findElement(By.xpath("//*[@id='recaptcha-anchor']/div[1]")).click();
+	
+	driver.findElement(By.id("send2")).click();
 	
 w.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='inspiring_energy_section']/div[2]/div/ol/div/div/div/div[@class='owl-item active']/li/div/a/span/span/img[@alt='Ananda Spray']")));	
 
